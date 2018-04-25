@@ -1,0 +1,25 @@
+#!ipxe
+
+set HTTPS https://sootsplash.csci2461.com/pboot.ipxe
+
+:start
+echo
+echo -n Reaching out to ${HTTPS}...
+sleep 2
+echo
+dhcp
+sleep 1
+echo
+chain ${HTTPS} || goto unsuccess
+goto win_exit
+
+:unsuccess
+echo Connection unsuccessful.
+sleep 2
+echo You're being redirected to iPXE shell.
+echo To end, type "exit".
+shell
+goto win_exit
+
+:win_exit
+exit 0

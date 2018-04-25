@@ -1,0 +1,53 @@
+#!ipxe
+
+:start
+goto menu
+goto win_exit
+
+:menu
+clear choice
+menu Install or Live
+item live ${space} Boot Windows 10 PE Live
+item installation ${space} Install Windows 10
+choose --timeout 15000 --default ${menu} choice || goto live
+echo ${cls}
+goto ${choice}
+
+:live
+echo
+echo -n Looking for Windows 10 PE LIVE startup files...
+sleep 1
+echo
+echo
+kernel Win10PE/wimboot
+initrd Win10PE/bootmgr bootmgr
+initrd Win10PE/Boot/BCD BCD
+initrd Win10PE/Boot/boot.sdi boot.sdi
+initrd Win10PE/Sources/boot.wim boot.wim
+boot || goto fail
+goto win_exit
+
+:installation
+echo
+echo -n Looking for Windows 10 INSTALL startup files...
+sleep 1
+echo
+echo
+kernel Win10/wimboot
+initrd Win10/bootmgr bootmgr
+initrd Win10/boot/bcd bcd
+initrd Win10/boot/boot.sdi boot.sdi
+initrd Win10/sources/boot.wim boot.wim
+boot || goto fail
+goto win_exit
+
+:fail
+echo
+echo -n Execution unsuccessful.
+sleep 3
+echo
+echo
+goto win_exit
+
+:win_exit
+exit 0
