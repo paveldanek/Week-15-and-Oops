@@ -9,10 +9,10 @@ The [pboot.ipxe](Scripts/pboot.ipxe) script on our remote server has changed a l
 _How is it all done?_
 
 **Step 1.**
-Obtain Windows 10 Installation ISO file. That can ne done [here](https://www.microsoft.com/en-us/software-download/windows10ISO).
+Obtain Windows 10 Installation ISO file. That can be done [here](https://www.microsoft.com/en-us/software-download/windows10ISO).
 
 **Step 2.**
-Obtain Windows 10 PE (Preinstallation Environment) ISO file. For this I found a third-party software called [AOMEI PE Builder](https://www.aomeitech.com/pe-builder.html). Works well and fast. I will take you through the process.
+Obtain Windows 10 PE (Preinstallation Environment) ISO file. For this I found a third-party software called [AOMEI PE Builder](https://www.aomeitech.com/pe-builder.html). Works well and fast. It will take you through the process.
 
 **Step 3.**
 Update the pboot.ipxe (see above) on the server.
@@ -44,7 +44,7 @@ If you choose **LIVE** however, the AOMEI Desktop shows up:
 ![Picture #4](Pix/IMG_4.JPG)
 
 
-Thanks to the LIVE Desktop, you're able to salvage the files on local HDD and/or do other repair jobs:
+Thanks to the LIVE Desktop, you're able to salvage the files on a local HDD and/or do other repair jobs:
 ![Picture #5](Pix/IMG_5.JPG)
 
 
