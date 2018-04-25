@@ -3,8 +3,8 @@
 ### Pavel Danek
 
 
-Hello everyone, another week went by I got some significant progress with my part of the project. The [iPXE](https://ipxe.org/start) along with the embedded [pavelboot](Scripts/pavelboot) script has been deployed and has been tested in case of successful and unsuccessful connection.
-The [pboot.ipxe](Scripts/pboot.ipxe) script on our remote server has changed a little and a custom menu has been added (see pictures below). Now we're able to either perform a **full install of Windows 10** or deploy **Windows 10 PE** (aka live version of Windows) in order to access/repair problems on the host PC.
+Hello everyone, another week went by and I've got some significant progress with my part of the project!!! The [iPXE](https://ipxe.org/start) along with the embedded [pavelboot](Scripts/pavelboot) script has been deployed and has been tested in case of successful and unsuccessful connection.
+The [pboot.ipxe](Scripts/pboot.ipxe) script on our remote server has changed a little: a custom menu has been added (see pictures below). Now we're able to either perform a **full install of Windows 10** or deploy **Windows 10 PE** (aka live version of Windows) in order to access/repair problems on the host PC.
 
 _How is it all done?_
 
